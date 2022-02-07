@@ -1,0 +1,24 @@
+{
+  "name": "hexo-tag-pcloud",
+  "version": "1.0.1",
+  "description": "A Hexo tag for inserting pcloud public links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p1slave/hexo-tag-pcloud.git"
+  },
+  "keywords": [
+    "hexo",
+    "pcloud",
+    "tag"
+  ],
+  "author": "p1slave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/p1slave/hexo-tag-pcloud/issues"
+  },
+  "homepage": "https://github.com/p1slave/hexo-tag-pcloud#readme"
+}
