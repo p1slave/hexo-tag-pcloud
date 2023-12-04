@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-pcloud",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Hexo tag for inserting pcloud public links",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/p1slave/hexo-tag-pcloud/issues"
   },
-  "homepage": "https://github.com/p1slave/hexo-tag-pcloud#readme"
+  "homepage": "https://github.com/p1slave/hexo-tag-pcloud#readme",
+  "dependencies": {
+    "hexo-util": "^3.1.0"
+  }
 }

@@ -13,7 +13,6 @@ const rImgFile = /([^\s]+(\.(jpg|JPG|png|PNG|gif|GIF|bmp|BMP))$)/;
 * Syntax:
 *   {% pcloudimg [class names] imageFile [width] [height] [title text [alt text]] %}
 */
-
 function pcloudImgTag(args, content) {
     const classes = [];
     let src, width, height, title, alt;
@@ -21,12 +20,17 @@ function pcloudImgTag(args, content) {
     // Find image URL and class name
     while (args.length > 0) {
       const item = args.shift();
-	  // The property `src` must be the name of the image file without relative path
-	  if (rImgFile.test(item)) {
-		const { slug } = this
-		const host = hexo.config.pcloud.host || "https://filedn.com"
-		const relative_path = hexo.config.pcloud.relative_path
-		src = pathFn.join(host, relative_path, slug, item)
+      if (rImgFile.test(item)) {
+        const { slug } = this
+        const enable = hexo.config.pcloud.enable
+        const host = hexo.config.pcloud.host || "https://filedn.com"
+        const public_folder = hexo.config.pcloud.public_folder 
+        const asset_path = hexo.config.pcloud.asset_path
+        if (enable) {
+          src = pathFn.join(host, public_folder, asset_path, slug, item)  
+        } else {
+          src = item
+        }
         break;
       } else {
         classes.push(item);
